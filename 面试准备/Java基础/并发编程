@@ -20,4 +20,19 @@ while(条件不满足) {
 活跃性 ：死锁、活锁（随机时间）、饥饿（线程无法获取资源，公平锁）
 性能 ：无锁算法（局部变量、乐观锁、CAS算法、减少锁的时间）
 
-管程模型 ：
+并发工具：
+Lock 和 Condition
+Lock 互斥
+Lock的优点：
+
+// 支持中断的 API
+void lockInterruptibly() 
+  throws InterruptedException;
+// 支持超时的 API
+boolean tryLock(long time, TimeUnit unit) 
+  throws InterruptedException;
+// 支持非阻塞获取锁的 API
+boolean tryLock();
+
+
+Condition 同步
